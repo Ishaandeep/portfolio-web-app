@@ -107,29 +107,21 @@ export const projects = [
     description:
       "Research-focused healthcare application leveraging AI for early disease detection and diagnosis. Implements deep learning models for medical image analysis and predictive healthcare analytics.",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
-    technologies: ["Python", "PyTorch", "FastAPI", "React", "PostgreSQL", "Docker"],
+    technologies: ["Python", "PyTorch", "OpenCV", "TensorFlow", "Logistic Regression", "Support Vector Machine"],
     features: [
       "Deep learning models for medical image classification",
-      "Early disease detection with 92% accuracy",
-      "Patient data analytics dashboard",
-      "Secure HIPAA-compliant data handling",
+      "Early disease detection with 96% accuracy",
+      "Proposed a model to detect diseases at an early stage using Logistic Regression and Support Vector Machine",
     ],
     github: "https://github.com/ishaandeep/ai-healthcare",
   },
   {
     id: 3,
     title: "Awesmart MERN Website",
-    description:
-      "Full-stack e-commerce platform built with MERN stack featuring real-time inventory management, payment gateway integration, and intelligent product recommendations.",
+    description: "A Website using MERN stack for Financial firm Awesmart.",
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop",
-    technologies: ["MongoDB", "Express.js", "React", "Node.js", "Redux", "Stripe", "AWS"],
-    features: [
-      "Real-time inventory tracking and management",
-      "Secure payment processing with Stripe integration",
-      "AI-powered product recommendation engine",
-      "Admin dashboard for analytics and order management",
-      "Responsive design with excellent UX",
-    ],
+    technologies: ["MongoDB", "Express.js", "React", "Node.js", "Redux", "TailwindCSS", "HTML", "CSS"],
+    features: ["A Full Stack Website", "Responsive design with excellent UX"],
     github: "https://github.com/ishaandeep/awesmart",
   },
 ];
