@@ -35,11 +35,12 @@ const Hero = () => {
 
       <div className="section-container relative z-10">
         <div className="flex flex-col items-center lg:grid lg:grid-cols-2 gap-6 lg:gap-12">
-          <div className="text-center lg:text-left w-full lg:order-1">
+          <div className="text-center lg:text-left w-full flex flex-col">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
+              className="order-1"
             >
               <span className="inline-block px-4 py-2 mb-4 text-sm font-medium text-primary-600 dark:text-primary-400 bg-primary-100 dark:bg-primary-900/30 rounded-full">
                 👋 Welcome to my portfolio
@@ -47,7 +48,7 @@ const Hero = () => {
             </motion.div>
 
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight order-1"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -59,7 +60,7 @@ const Hero = () => {
             </motion.h1>
 
             <motion.h2
-              className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-4"
+              className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-4 order-1"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
@@ -68,7 +69,7 @@ const Hero = () => {
             </motion.h2>
 
             <motion.p
-              className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto lg:mx-0"
+              className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto lg:mx-0 order-1"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -77,61 +78,29 @@ const Hero = () => {
             </motion.p>
 
             <motion.div
-              className="lg:hidden mb-6"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <motion.div
-                animate={{ y: [0, -20, 0] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                <div className="relative w-56 h-56 sm:w-64 sm:h-64 mx-auto">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-purple-600 rounded-full blur-xl opacity-50" />
-                  
-                  <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
-                    <img
-                      src={personalInfo.profileImage}
-                      alt={personalInfo.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-
-                  <motion.div
-                    className="absolute -top-4 -right-4 w-24 h-24 bg-primary-500 rounded-full opacity-20 blur-2xl"
-                    animate={{
-                      scale: [1, 1.5, 1],
-                      opacity: [0.2, 0.4, 0.2],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                    }}
-                  />
-                  <motion.div
-                    className="absolute -bottom-4 -left-4 w-24 h-24 bg-purple-500 rounded-full opacity-20 blur-2xl"
-                    animate={{
-                      scale: [1.5, 1, 1.5],
-                      opacity: [0.2, 0.4, 0.2],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                    }}
-                  />
-                </div>
-              </motion.div>
-            </motion.div>
-
-            <motion.div
-              className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start mb-6"
+              className="lg:hidden mb-6 order-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
+            >
+              <div className="relative w-56 h-56 sm:w-64 sm:h-64 mx-auto">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-purple-600 rounded-full blur-xl opacity-30" />
+                
+                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
+                  <img
+                    src={personalInfo.profileImage}
+                    alt={personalInfo.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start mb-6 lg:mb-8 order-3"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
             >
               <Button
                 variant="primary"
@@ -157,10 +126,10 @@ const Hero = () => {
             </motion.div>
 
             <motion.div
-              className="flex gap-4 justify-center lg:justify-start"
+              className="flex gap-4 justify-center lg:justify-start order-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
             >
               {personalInfo.social.github && (
                 <motion.a
@@ -197,51 +166,19 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="hidden lg:flex justify-center lg:justify-end w-full"
+            className="hidden lg:flex justify-center lg:justify-end w-full order-2"
           >
-            <motion.div
-              animate={{ y: [0, -20, 0] }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            >
-              <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-purple-600 rounded-full blur-xl opacity-50" />
-                
-                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
-                  <img
-                    src={personalInfo.profileImage}
-                    alt={personalInfo.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                <motion.div
-                  className="absolute -top-4 -right-4 w-24 h-24 bg-primary-500 rounded-full opacity-20 blur-2xl"
-                  animate={{
-                    scale: [1, 1.5, 1],
-                    opacity: [0.2, 0.4, 0.2],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                  }}
-                />
-                <motion.div
-                  className="absolute -bottom-4 -left-4 w-24 h-24 bg-purple-500 rounded-full opacity-20 blur-2xl"
-                  animate={{
-                    scale: [1.5, 1, 1.5],
-                    opacity: [0.2, 0.4, 0.2],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                  }}
+            <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-purple-600 rounded-full blur-xl opacity-30" />
+              
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
+                <img
+                  src={personalInfo.profileImage}
+                  alt={personalInfo.name}
+                  className="w-full h-full object-cover"
                 />
               </div>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
