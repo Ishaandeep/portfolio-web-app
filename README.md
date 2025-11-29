@@ -6,7 +6,7 @@ A modern, responsive personal portfolio website built with React, Vite, and Tail
 
 Passionate Software Engineer with expertise in building scalable microservices and AI-driven applications. Experienced in the fintech domain with a strong focus on creating robust backend systems and innovative solutions. Skilled in full-stack development with a particular emphasis on microservices architecture, cloud technologies, and artificial intelligence integration. Committed to writing clean, maintainable code and delivering high-impact solutions.
 
-## 🚀 Live Demo
+## 🚀 Portfolio
 
 Visit: [https://ishaandeep.github.io/portfolio-web-app/](https://ishaandeep.github.io/portfolio-web-app/)
 
@@ -48,7 +48,7 @@ AI-powered wardrobe management using computer vision and machine learning for pe
 
 ### 🔹 AI Health Care Detection
 
-Research-focused healthcare application leveraging AI for early disease detection with 92% accuracy.
+Research-focused healthcare application leveraging AI for early disease detection with 96% accuracy.
 
 ## 📧 Contact
 

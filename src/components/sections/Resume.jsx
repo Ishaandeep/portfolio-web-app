@@ -47,17 +47,17 @@ const Resume = () => {
                 My resume provides detailed information about my professional journey and technical expertise.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <a
                   href={personalInfo.resumePDF}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium rounded-lg
+                  className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-medium rounded-lg
                              bg-gradient-to-r from-primary-500 to-purple-600 text-white 
                              hover:shadow-lg hover:scale-105 transition-all duration-300
                              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
                 >
-                  <FaDownload className="text-xl" />
+                  <FaDownload className="text-lg sm:text-xl" />
                   View Resume
                 </a>
                 <Button
@@ -65,6 +65,7 @@ const Resume = () => {
                   size="lg"
                   href={personalInfo.social.linkedin}
                   icon={<FaLinkedin />}
+                  className="w-full sm:w-auto"
                 >
                   View LinkedIn
                 </Button>

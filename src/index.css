@@ -15,16 +15,16 @@
 
 @layer components {
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 md:py-20 lg:py-24;
   }
   
   .section-title {
-    @apply text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 sm:mb-4;
     @apply bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent;
   }
   
   .section-subtitle {
-    @apply text-lg text-gray-600 dark:text-gray-400 text-center mb-12;
+    @apply text-base sm:text-lg text-gray-600 dark:text-gray-400 text-center mb-8 sm:mb-12 px-4;
   }
   
   .glass-effect {

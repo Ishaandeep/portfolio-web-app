@@ -22,7 +22,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Create mailto link with form data
     const mailtoLink = `mailto:${personalInfo.email}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     )}`
@@ -60,18 +59,18 @@ const Contact = () => {
         subtitle="Let's discuss your next project or opportunity"
       />
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="mb-8">
-            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          <div className="mb-6 sm:mb-8">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
               Let's work together
             </h3>
-            <p className="text-lg text-gray-600 dark:text-gray-400">
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400">
               I'm always interested in hearing about new projects and opportunities. 
               Whether you have a question or just want to say hi, feel free to reach out!
             </p>
@@ -91,17 +90,17 @@ const Contact = () => {
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 whileHover={{ x: 10 }}
               >
-                <div className="flex items-center gap-4 p-6 bg-white dark:bg-gray-900 rounded-xl shadow-md 
+                <div className="flex items-center gap-3 sm:gap-4 p-4 sm:p-6 bg-white dark:bg-gray-900 rounded-xl shadow-md 
                                 hover:shadow-xl transition-all duration-300">
-                  <div className={`p-4 bg-gradient-to-br ${method.color} text-white rounded-lg 
-                                   group-hover:scale-110 transition-transform duration-300`}>
-                    <div className="text-2xl">{method.icon}</div>
+                  <div className={`p-3 sm:p-4 bg-gradient-to-br ${method.color} text-white rounded-lg 
+                                   group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
+                    <div className="text-xl sm:text-2xl">{method.icon}</div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
+                  <div className="min-w-0">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1 text-sm sm:text-base">
                       {method.title}
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm truncate">
                       {method.value}
                     </p>
                   </div>
