@@ -5,7 +5,7 @@ import Button from '../ui/Button'
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-primary-50/30 to-purple-50/30 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-primary-50/30 to-purple-50/30 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 pt-20">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute top-20 left-10 w-72 h-72 bg-primary-400/10 rounded-full blur-3xl"
@@ -35,47 +35,48 @@ const Hero = () => {
 
       <div className="section-container relative z-10">
         <div className="flex flex-col items-center lg:grid lg:grid-cols-2 gap-6 lg:gap-12">
-          <div className="text-center lg:text-left w-full flex flex-col">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="order-1"
-            >
-              <span className="inline-block px-4 py-2 mb-4 text-sm font-medium text-primary-600 dark:text-primary-400 bg-primary-100 dark:bg-primary-900/30 rounded-full">
-                👋 Welcome to my portfolio
-              </span>
-            </motion.div>
+          <div className="text-center lg:text-left w-full flex flex-col relative z-10">
+            <div className="order-1">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                <span className="inline-block px-4 py-2 mb-4 text-sm font-medium text-primary-600 dark:text-primary-400 bg-primary-100 dark:bg-primary-900/30 rounded-full">
+                  👋 Welcome to my portfolio
+                </span>
+              </motion.div>
 
-            <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight order-1"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              Hi, I'm{' '}
-              <span className="bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-                {personalInfo.name}
-              </span>
-            </motion.h1>
+              <motion.h1
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                Hi, I'm{' '}
+                <span className="bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                  {personalInfo.name}
+                </span>
+              </motion.h1>
 
-            <motion.h2
-              className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-4 order-1"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-            >
-              {personalInfo.title}
-            </motion.h2>
+              <motion.h2
+                className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+              >
+                {personalInfo.title}
+              </motion.h2>
 
-            <motion.p
-              className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto lg:mx-0 order-1"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              {personalInfo.tagline}
-            </motion.p>
+              <motion.p
+                className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto lg:mx-0"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+              >
+                {personalInfo.tagline}
+              </motion.p>
+            </div>
 
             <motion.div
               className="lg:hidden mb-6 order-2"
